@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #08020e;
+    color: #fcf8f2;
+  }
+
+  ::selection {
+    background-color: #f59e0b;
+    color: #170326;
+  }
+}
+
+/* Bespoke Luxury & Festive Utilities */
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-serif-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-handwriting {
+  font-family: 'Caveat', cursive;
+}
+
+/* Subtle Royal Golden Sheen */
+.gold-shimmer {
+  background: linear-gradient(
+    110deg,
+    #fef08a 0%,
+    #fbbf24 25%,
+    #d97706 50%,
+    #fbbf24 75%,
+    #fef08a 100%
+  );
+  background-size: 200% 100%;
+  animation: goldShimmer 6s ease-in-out infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes goldShimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Velvety Card Glassmorphism */
+.velvet-card {
+  background: linear-gradient(135deg, rgba(32, 10, 48, 0.78) 0%, rgba(18, 5, 28, 0.88) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(245, 176, 65, 0.2);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.velvet-card:hover {
+  border-color: rgba(245, 176, 65, 0.38);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7), 0 0 35px rgba(245, 176, 65, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+}
+
+/* Parchment Letter Style */
+.parchment-sheet {
+  background: #fdfbf7;
+  background-image: 
+    radial-gradient(#e5dfd3 1px, transparent 1px),
+    radial-gradient(#e5dfd3 1px, #fdfbf7 1px);
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  box-shadow: 
+    0 1px 1px rgba(0,0,0,0.1),
+    0 20px 40px rgba(0,0,0,0.5),
+    0 0 0 1px rgba(180, 140, 80, 0.3),
+    inset 0 0 40px rgba(210, 180, 140, 0.2);
+}
+
+/* Diya Flame Flicker */
+@keyframes naturalFlicker {
+  0%, 100% {
+    transform: scale(1) rotate(-1deg);
+    filter: drop-shadow(0 0 10px #f59e0b) drop-shadow(0 0 20px rgba(245, 158, 11, 0.5));
+  }
+  25% {
+    transform: scale(1.08, 1.15) rotate(1.5deg);
+    filter: drop-shadow(0 0 14px #fbbf24) drop-shadow(0 0 25px rgba(251, 191, 36, 0.6));
+  }
+  50% {
+    transform: scale(0.96, 0.92) rotate(-1.5deg);
+    filter: drop-shadow(0 0 8px #d97706) drop-shadow(0 0 15px rgba(217, 119, 6, 0.4));
+  }
+  75% {
+    transform: scale(1.04, 1.08) rotate(1deg);
+    filter: drop-shadow(0 0 16px #f59e0b) drop-shadow(0 0 28px rgba(245, 158, 11, 0.6));
+  }
+}
+
+.candle-flame {
+  animation: naturalFlicker 2s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #08020e;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a1555;
+  border-radius: 9999px;
+  border: 1px solid #08020e;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
